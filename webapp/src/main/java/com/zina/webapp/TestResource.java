@@ -10,7 +10,7 @@ import java.util.Date;
 //@Singleton
 public class TestResource {
     @GET
-    @Produces("text/plain")
+    @Produces("text/shortdate")
     public Date hello( ) {
         return Calendar.getInstance().getTime();
     }
