@@ -1,18 +1,26 @@
 package com.zina.webapp;
 
 import javax.inject.Singleton;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 
-@Path("/hello-world")
-@Singleton
+@Path("{pathParam}/hello-world")
+//@Singleton
 public class TestResource {
-    private int count;
+    @PathParam("pathParam") private String pathParamExample;
+    @QueryParam("query") private String queryParamExample;
+
     @GET
     @Produces("text/plain")
     public String hello() {
-        count = count+1;
-        return "Hello, World!"+ count;
+        return "Path Param " + pathParamExample + queryParamExample;
     }
+
+
+//    private int count;
+//    @GET
+//    @Produces("text/plain")
+//    public String hello() {
+//        count = count+1;
+//        return "Hello, World!"+ count;
+//    }
 }
