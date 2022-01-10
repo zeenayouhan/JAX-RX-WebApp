@@ -5,7 +5,7 @@ import javax.ws.rs.*;
 import java.util.Calendar;
 import java.util.Date;
 
-@Path("/test")
+@Path("test")
 //@Path("{pathParam}/hello-world")
 //@Singleton
 public class TestResource {
